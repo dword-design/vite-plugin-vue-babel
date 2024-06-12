@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/dword-design/vite-plugin-vue-babel/compare/v1.0.0...v1.0.1) (2024-06-12)
+
+
+### Bug Fixes
+
+* foo ([371815f](https://github.com/dword-design/vite-plugin-vue-babel/commit/371815fcfeba14d6cdd503a68ca85dd3b936dbbb))
+
 # 1.0.0 (2024-06-12)
 
 
