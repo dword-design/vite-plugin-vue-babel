@@ -1,12 +1,12 @@
 <!-- TITLE/ -->
-# vite-plugin-vue-babel
+# @dword-design/vite-plugin-vue-babel
 <!-- /TITLE -->
 
 <!-- BADGES/ -->
   <p>
-    <a href="https://npmjs.org/package/vite-plugin-vue-babel">
+    <a href="https://npmjs.org/package/@dword-design/vite-plugin-vue-babel">
       <img
-        src="https://img.shields.io/npm/v/vite-plugin-vue-babel.svg"
+        src="https://img.shields.io/npm/v/@dword-design/vite-plugin-vue-babel.svg"
         alt="npm version"
       >
     </a><img src="https://img.shields.io/badge/os-linux%20%7C%C2%A0macos%20%7C%C2%A0windows-blue" alt="Linux macOS Windows compatible"><a href="https://github.com/dword-design/vite-plugin-vue-babel/actions">
@@ -58,10 +58,10 @@
 
 ```bash
 # npm
-$ npm install vite-plugin-vue-babel
+$ npm install @dword-design/vite-plugin-vue-babel
 
 # Yarn
-$ yarn add vite-plugin-vue-babel
+$ yarn add @dword-design/vite-plugin-vue-babel
 ```
 <!-- /INSTALL -->
 
