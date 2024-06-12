@@ -6,7 +6,6 @@ import { parse } from 'vue/compiler-sfc'
 import vueSfcDescriptorToString from 'vue-sfc-descriptor-to-string'
 
 export default () => ({
-  enforce: 'pre',
   transform: async (code, id) => {
     const query = parseVueRequest(id)
     if (

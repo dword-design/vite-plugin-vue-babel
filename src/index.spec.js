@@ -22,7 +22,7 @@ export default tester(
 
           export default {
             vite: {
-              plugins: [self()],
+              plugins: [{ enforce: 'pre', ...self() }],
             },
           }
         `,
