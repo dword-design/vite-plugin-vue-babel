@@ -1,0 +1,53 @@
+{
+  "name": "vite-plugin-vue-babel",
+  "version": "1.0.0",
+  "repository": "dword-design/vite-plugin-vue-babel",
+  "funding": "https://github.com/sponsors/dword-design",
+  "license": "MIT",
+  "author": "Sebastian Landwehr <info@sebastianlandwehr.com>",
+  "type": "module",
+  "exports": "./dist/index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "checkUnknownFiles": "base checkUnknownFiles",
+    "commit": "base commit",
+    "depcheck": "base depcheck",
+    "dev": "base dev",
+    "lint": "base lint",
+    "prepare": "base prepare",
+    "prepublishOnly": "base prepublishOnly",
+    "test": "base test"
+  },
+  "dependencies": {
+    "@dword-design/functions": "^6.0.0",
+    "@vue/compiler-dom": "^3.4.27",
+    "vue-sfc-descriptor-to-string": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.7",
+    "@babel/plugin-proposal-pipeline-operator": "^7.24.7",
+    "@dword-design/base": "^11.1.1",
+    "@dword-design/tester": "^2.0.19",
+    "@dword-design/tester-plugin-tmp-dir": "^2.1.26",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "depcheck-package-name": "^3.0.1",
+    "execa": "^9.2.0",
+    "nuxt": "^3.12.1",
+    "output-files": "^2.0.32",
+    "vue": "^3.4.27"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.24.7",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "vue": "^3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
