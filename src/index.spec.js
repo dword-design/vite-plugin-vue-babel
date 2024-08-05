@@ -1,9 +1,9 @@
-import { endent } from '@dword-design/functions'
-import tester from '@dword-design/tester'
-import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir'
-import packageName from 'depcheck-package-name'
-import { execaCommand } from 'execa'
-import outputFiles from 'output-files'
+import { endent } from '@dword-design/functions';
+import tester from '@dword-design/tester';
+import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir';
+import packageName from 'depcheck-package-name';
+import { execaCommand } from 'execa';
+import outputFiles from 'output-files';
 
 export default tester(
   {
@@ -35,9 +35,10 @@ export default tester(
           const foo = x |> x => x * 2
           </script>
         `,
-      })
-      await execaCommand('nuxt build')
+      });
+
+      await execaCommand('nuxt build');
     },
   },
   [testerPluginTmpDir()],
-)
+);
