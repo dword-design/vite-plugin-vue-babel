@@ -11,7 +11,9 @@ export default () => ({
 
     if (
       query.filename.endsWith('.vue') &&
-      query.query.type !== 'style' &&
+      (!query.query.type ||
+        query.query.type === 'template' ||
+        query.query.type === 'script') &&
       !query.filename.split('/').includes('node_modules')
     ) {
       const sfc = parse(code);
