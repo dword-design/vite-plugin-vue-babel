@@ -1,0 +1,10 @@
+{
+  "name": "@dword-design/node",
+  "testRunner": "playwright",
+  "depcheckConfig": {
+    "ignoreMatches": [
+      "playwright",
+      "playwright-chromium"
+    ]
+  }
+}

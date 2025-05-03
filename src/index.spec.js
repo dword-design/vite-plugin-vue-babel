@@ -1,44 +1,54 @@
 import { endent } from '@dword-design/functions';
-import tester from '@dword-design/tester';
-import testerPluginTmpDir from '@dword-design/tester-plugin-tmp-dir';
+import { expect, test } from '@playwright/test';
 import packageName from 'depcheck-package-name';
 import { execaCommand } from 'execa';
+import fs from 'fs-extra';
+import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
+import kill from 'tree-kill-promise';
+import withLocalTmpDir from 'with-local-tmp-dir';
 
-export default tester(
-  {
-    works: async () => {
-      await outputFiles({
-        'babel.config.json': JSON.stringify({
-          plugins: [
-            [
-              packageName`@babel/plugin-proposal-pipeline-operator`,
-              { proposal: 'fsharp' },
-            ],
-          ],
-        }),
-        'nuxt.config.js': endent`
-          import self from '../src/index.js'
+let resetTmpDir;
+test.beforeEach(async () => (resetTmpDir = await withLocalTmpDir()));
+test.afterEach(() => resetTmpDir());
 
-          export default {
-            vite: {
-              plugins: [{ enforce: 'pre', ...self() }],
-            },
-          }
-        `,
-        'pages/index.vue': endent`
-          <template>
-            {{ foo }}
-          </template>
+test('works', async ({ page }) => {
+  await outputFiles({
+    'babel.config.json': JSON.stringify({
+      plugins: [
+        [
+          packageName`@babel/plugin-proposal-pipeline-operator`,
+          { proposal: 'fsharp' },
+        ],
+      ],
+    }),
+    'nuxt.config.js': endent`
+      import self from '../src/index.js'
 
-          <script setup>
-          const foo = x |> x => x * 2
-          </script>
-        `,
-      });
+      export default {
+        vite: {
+          plugins: [{ enforce: 'pre', ...self() }],
+        },
+      }
+    `,
+    'pages/index.vue': endent`
+      <template>
+        <div class="foo">{{ foo }}</div>
+      </template>
 
-      await execaCommand('nuxt build');
-    },
-  },
-  [testerPluginTmpDir()],
-);
+      <script setup>
+      const foo = 1 |> x => x * 2
+      </script>
+    `,
+  });
+
+  const nuxt = execaCommand('nuxt dev', { env: { NODE_ENV: '' } });
+
+  try {
+    await nuxtDevReady();
+    await page.goto('http://localhost:3000');
+    await expect(page.locator('.foo')).toHaveText('2');
+  } finally {
+    await kill(nuxt.pid);
+  }
+});
