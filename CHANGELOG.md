@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/dword-design/vite-plugin-vue-babel/compare/v1.0.1...v1.0.2) (2025-05-03)
+
+
+### Bug Fixes
+
+* lock file maintenance ([#4](https://github.com/dword-design/vite-plugin-vue-babel/issues/4)) ([ad64f8d](https://github.com/dword-design/vite-plugin-vue-babel/commit/ad64f8df732ab88059b48f0bdbbdfe53f308a0f2))
+
 ## [1.0.1](https://github.com/dword-design/vite-plugin-vue-babel/compare/v1.0.0...v1.0.1) (2024-06-12)
 
 
