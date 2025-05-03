@@ -37,7 +37,7 @@ test('works', async ({ page }) => {
       </template>
 
       <script setup>
-      const foo = x |> x => x * 2
+      const foo = 1 |> x => x * 2
       </script>
     `,
   });
@@ -78,7 +78,7 @@ test('hot reload', async ({ page }) => {
       </template>
 
       <script setup>
-      const foo = x |> x => x * 2;
+      const foo = 1 |> x => x * 2;
       </script>
     `,
   });
@@ -98,7 +98,7 @@ test('hot reload', async ({ page }) => {
         </template>
 
         <script setup>
-        const foo = x |> x => x * 2;
+        const foo = 1 |> x => x * 2;
         </script>
       `,
     );
