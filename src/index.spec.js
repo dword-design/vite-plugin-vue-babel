@@ -2,7 +2,6 @@ import { endent } from '@dword-design/functions';
 import { expect, test } from '@playwright/test';
 import packageName from 'depcheck-package-name';
 import { execaCommand } from 'execa';
-import fs from 'fs-extra';
 import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
 import kill from 'tree-kill-promise';
