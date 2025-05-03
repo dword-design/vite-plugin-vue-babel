@@ -2,6 +2,7 @@ import { endent } from '@dword-design/functions';
 import { expect, test } from '@playwright/test';
 import packageName from 'depcheck-package-name';
 import { execaCommand } from 'execa';
+import fs from 'fs-extra';
 import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
 import kill from 'tree-kill-promise';
@@ -47,6 +48,67 @@ test('works', async ({ page }) => {
     await nuxtDevReady();
     await page.goto('http://localhost:3000');
     await expect(page.locator('.foo')).toHaveText('2');
+  } finally {
+    await kill(nuxt.pid);
+  }
+});
+
+test('hot reload', async ({ page }) => {
+  await outputFiles({
+    'babel.config.json': JSON.stringify({
+      plugins: [
+        [
+          packageName`@babel/plugin-proposal-pipeline-operator`,
+          { proposal: 'fsharp' },
+        ],
+      ],
+    }),
+    'nuxt.config.js': endent`
+      import self from '../src/index.js'
+
+      export default {
+        vite: {
+          plugins: [{ enforce: 'pre', ...self() }],
+        },
+      }
+    `,
+    'pages/index.vue': endent`
+      <template>
+        <div class="foo">{{ foo }}</div>
+      </template>
+
+      <script setup>
+      const foo = 1 |> x => x * 2;
+      </script>
+    `,
+  });
+
+  const nuxt = execaCommand('nuxt dev', {
+    env: { NODE_ENV: '' },
+    stdio: 'inherit',
+  });
+
+  try {
+    await nuxtDevReady();
+    await page.goto('http://localhost:3000');
+    await expect(page.locator('.foo')).toBeAttached();
+    console.log('changing file');
+
+    await fs.outputFile(
+      'pages/index.vue',
+      endent`
+        <template>
+          <div class="bar">{{ foo }}</div>
+        </template>
+
+        <script setup>
+        const foo = 1 |> x => x * 2;
+        </script>
+      `,
+    );
+
+    console.log('file changed');
+    await expect(page.locator('.bar')).toBeAttached();
   } finally {
     await kill(nuxt.pid);
   }
