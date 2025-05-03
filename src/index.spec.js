@@ -83,12 +83,16 @@ test('hot reload', async ({ page }) => {
     `,
   });
 
-  const nuxt = execaCommand('nuxt dev', { env: { NODE_ENV: '' } });
+  const nuxt = execaCommand('nuxt dev', {
+    env: { NODE_ENV: '' },
+    stdio: 'inherit',
+  });
 
   try {
     await nuxtDevReady();
     await page.goto('http://localhost:3000');
     await expect(page.locator('.foo')).toBeAttached();
+    console.log('changing file');
 
     await fs.outputFile(
       'pages/index.vue',
@@ -103,6 +107,7 @@ test('hot reload', async ({ page }) => {
       `,
     );
 
+    console.log('file changed');
     await expect(page.locator('.bar')).toBeAttached();
   } finally {
     await kill(nuxt.pid);
