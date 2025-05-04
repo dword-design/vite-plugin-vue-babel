@@ -39,9 +39,9 @@
     "output-files": "^2.0.32",
     "playwright": "^1.52.0",
     "playwright-chromium": "^1.52.0",
+    "playwright-local-tmp-dir": "^1.0.0",
     "tree-kill-promise": "^3.0.14",
-    "vue": "^3.5.13",
-    "with-local-tmp-dir": "^5.1.1"
+    "vue": "^3.5.13"
   },
   "peerDependencies": {
     "@babel/core": "^7.24.7",

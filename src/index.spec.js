@@ -1,27 +1,11 @@
 import { endent } from '@dword-design/functions';
-import { expect, test as base } from '@playwright/test';
+import { expect } from '@playwright/test';
 import packageName from 'depcheck-package-name';
 import { execaCommand } from 'execa';
 import nuxtDevReady from 'nuxt-dev-ready';
 import outputFiles from 'output-files';
+import { test } from 'playwright-local-tmp-dir';
 import kill from 'tree-kill-promise';
-import withLocalTmpDir from 'with-local-tmp-dir';
-
-const test = base.extend({
-  localTmpDir: [
-    async ({}, use) => {
-      const reset = await withLocalTmpDir();
-      process.on('SIGINT', () => reset());
-
-      try {
-        await use();
-      } finally {
-        await reset();
-      }
-    },
-    { auto: true },
-  ],
-});
 
 test('works', async ({ page }) => {
   await outputFiles({

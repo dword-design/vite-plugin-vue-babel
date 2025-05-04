@@ -54,15 +54,15 @@ importers:
       playwright-chromium:
         specifier: ^1.52.0
         version: 1.52.0
+      playwright-local-tmp-dir:
+        specifier: ^1.0.0
+        version: 1.0.0(@playwright/test@1.52.0)
       tree-kill-promise:
         specifier: ^3.0.14
         version: 3.0.14
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.8.3)
-      with-local-tmp-dir:
-        specifier: ^5.1.1
-        version: 5.1.1
 
 packages:
 
@@ -6626,6 +6626,12 @@ packages:
     resolution: {integrity: sha512-l2osTgLXSMeuLZOML9qYODUQoPPnUsKsb5/P6LJ2e6uPKXUdPK5WYhN4z03G+YNbWmGDY4YENauNu4ZKczreHg==}
     engines: {node: '>=18'}
     hasBin: true
+
+  playwright-local-tmp-dir@1.0.0:
+    resolution: {integrity: sha512-kx+4AubMHUsqxNDUU1YhVwRdszY89SWXCBXLyGcGFlBv/SnLbRnNY9iz+IsyWLO53Z8n49Y9dTyLouagA13vWg==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      '@playwright/test': ^1
 
   playwright@1.52.0:
     resolution: {integrity: sha512-JAwMNMBlxJ2oD1kce4KPtMkDeKGHQstdpFPcPH3maElAXon/QZeTvtsfXmTMRyO9TslfoYOXkSsvao2nE1ilTw==}
@@ -16715,6 +16721,11 @@ snapshots:
       playwright-core: 1.52.0
 
   playwright-core@1.52.0: {}
+
+  playwright-local-tmp-dir@1.0.0(@playwright/test@1.52.0):
+    dependencies:
+      '@playwright/test': 1.52.0
+      with-local-tmp-dir: 5.1.1
 
   playwright@1.52.0:
     dependencies:
