@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.27.1",
-    "@babel/plugin-proposal-pipeline-operator": "^7.27.1",
+    "@babel/plugin-proposal-pipeline-operator": "^8.0.0",
     "@dword-design/base": "^11.3.3",
     "@playwright/test": "^1.52.0",
     "@vitejs/plugin-vue": "^5.2.3",
