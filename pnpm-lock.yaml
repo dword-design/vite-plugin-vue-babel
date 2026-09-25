@@ -43,8 +43,8 @@ importers:
         specifier: ^3.17.1
         version: 3.17.1(@parcel/watcher@2.5.1)(@types/node@22.15.3)(db0@0.3.2)(eslint@8.57.1)(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.40.1)(sass@1.62.1)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(sass@1.62.1)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
       nuxt-dev-ready:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: ^6.0.0
+        version: 6.0.0
       output-files:
         specifier: ^2.0.32
         version: 2.0.32
@@ -801,6 +801,7 @@ packages:
   '@dword-design/babel-config@4.2.1':
     resolution: {integrity: sha512-RFGQfX00S7JaGHJUzJUU3W/4hNKloWLpY9CMG8hvSSvY9VjaACJ2Ews1YVWBpqVSIjoxHEfoUo99PpNIIPygEg==}
     engines: {node: '>=18'}
+    deprecated: Using TypeScript now
 
   '@dword-design/babel-plugin-wildcard@0.0.3':
     resolution: {integrity: sha512-J+OooxCchKZbU9cKvlWQFc9tDc0NipACWGadLE2JKRBJJcL4e/+3yFwrwestjn9yBk+JEq1FEzRSXi38FXWrag==}
@@ -862,18 +863,22 @@ packages:
   '@dword-design/functions@4.1.7':
     resolution: {integrity: sha512-kc7bzBKZasf0icxKldgB7dkpd1mcEQkPz8c0BP5Wuxy63bMYs+kNWbywFT+xNBWDT6N9cdTczHwBuVBgc8ZU0A==}
     engines: {node: '>=14'}
+    deprecated: Use lodash and endent
 
   '@dword-design/functions@5.0.27':
     resolution: {integrity: sha512-16A97RKtn21xLWI7Y7VhFz4WCWui+TLit/J5/l77BDpWmPi2LzgjQzDbafDDw7OUeY6GEAi/M4jdbuQhsIbSEg==}
     engines: {node: '>=14'}
+    deprecated: Use lodash and endent
 
   '@dword-design/functions@6.0.2':
     resolution: {integrity: sha512-bX8MqBkzGaYEIlGAdc3hLiHO3Gia1L/sguymbQkp07yB611ZZW4Y0lTGJxWAemJEggEVM5jr1IL4vvAUmQX8VA==}
     engines: {node: '>=18'}
+    deprecated: Use lodash and endent
 
   '@dword-design/jiti-babel-transform@2.0.0':
     resolution: {integrity: sha512-sT4TsdN6Id9k0ceZZjznmdIqdk94ZPHI21Pv0v6DeXqWRDxW0BoDVAqTbMjStSPV6n5i4AYRpwLBFN3hxYL2Lw==}
     engines: {node: '>=18'}
+    deprecated: Migrated to TypeScript
 
   '@dword-design/load-pkg@4.0.0':
     resolution: {integrity: sha512-lZxKRusgIqSg2y4jLzZzMPWyhrGPGke3YYmAxj4SoJeUGV4CmvYyhJkJnfA7Yaov7GMXZi64nlhx8D809VDazg==}
@@ -895,9 +900,14 @@ packages:
   '@dword-design/plugin-name-to-package-name@0.1.2':
     resolution: {integrity: sha512-kATg/RzRkq/Yv0qNJziPqwAzKstBTzuXnowH4MvAMyqW6C7o5HlgZtik3GzO0kBKCBZBoRswBSvo9AHclOTxfg==}
 
+  '@dword-design/port-ready-fork@0.0.3':
+    resolution: {integrity: sha512-nhfPIpKKuAmHoiCaezWlijoLee2RPxdzLlgx0zGdEq5LAyPEPcot7qqc0xIkBNIeOmG+1TVJMKvaV9CSFOQOQg==}
+    engines: {node: '>=6'}
+
   '@dword-design/pretest@1.0.15':
     resolution: {integrity: sha512-xN+aEzDzAZeBOboMqnqFXkAOSP02nuSMvA1sMbOpA2BZw7qUCKPLnKi94S+en+upXWXgF/fBpLgEmRR9TeDsCQ==}
     engines: {node: '>=14'}
+    deprecated: Migrated to Playwright
 
   '@dword-design/prettier-plugin-compactify@0.0.1':
     resolution: {integrity: sha512-CsZP1JqqxKhfxnFdvSCB4MYbKbpoLWzB5llLCjDEvd248Scxgw2msdr7W//u3NJJSWmX2ohrbFsxgrUqx81rhA==}
@@ -905,10 +915,12 @@ packages:
   '@dword-design/setup-test@1.0.2':
     resolution: {integrity: sha512-W861E4cbZmUaYri3mhZNfpo2Yxc1hHPP0v5iDZGE+h9EHplY+8tzWaTNHIF67DmrcDLP79zxd/lkJX0xZs0l8Q==}
     engines: {node: '>=14'}
+    deprecated: Migrated to Playwright
 
   '@dword-design/suppress-babel-register-esm-warning@1.1.10':
     resolution: {integrity: sha512-VkXvIeTTutLLGr05RQEcuAs+ePlJa3yN2xuUuA3OtfXywdKlxA9r5xMFzGnHVc/y8T/95Z2eOEBpCn2QkChokg==}
     engines: {node: '>=14'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@emnapi/core@1.4.3':
     resolution: {integrity: sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==}
@@ -2135,6 +2147,7 @@ packages:
 
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
+    deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
   '@unhead/vue@2.0.8':
     resolution: {integrity: sha512-e30+CfCl1avR+hzFtpvnBSesZ5TN2KbShStdT2Z+zs5WIBUvobQwVxSR0arX43To6KfwtCXAfi0iOOIH0kufHQ==}
@@ -2550,8 +2563,8 @@ packages:
     resolution: {integrity: sha512-Xm7bpRXnDSX2YE2YFfBk2FnF0ep6tmG7xPh8iHee8MIcrgq762Nkce856dYtJYLkuIoYZvGfTs/PbZhideTcEg==}
     engines: {node: '>=4'}
 
-  axios@1.9.0:
-    resolution: {integrity: sha512-re4CqKTJaURpzbLHtIi6XpDv20/CnpXOtjRY5/CU32L8gU8ek9UIivcfvSWvmKEngmVbrUtPpdDwWDWL7DNHvg==}
+  axios@1.20.0:
+    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
   axobject-query@4.1.0:
     resolution: {integrity: sha512-qIj0G9wZbMGNLjLmg1PT6v2mE9AH2zlnADJD/2tC6E00hgmhUOfEB6greHPAfLRSufHqROIUTkw6E+M3lH0PTQ==}
@@ -3131,6 +3144,7 @@ packages:
   cron-parser@4.9.0:
     resolution: {integrity: sha512-p0SaNjrHOnQeR8/VnfGbmg9te2kfyYSQ7Sc/j/6DtPL3JQvKxmjO9TSjNFpujqV3vEYYBvNNvXSxzyksBWAx1Q==}
     engines: {node: '>=12.0.0'}
+    deprecated: v4 is no longer maintained, upgrade to v5
 
   croner@9.0.0:
     resolution: {integrity: sha512-onMB0OkDjkXunhdW9htFjEhqrD54+M94i6ackoUkjHKbRnXdyEyKRelp4nJ1kAz32+s27jP1FsebpJCVl0BsvA==}
@@ -3420,6 +3434,7 @@ packages:
   depcheck-parser-babel@3.0.57:
     resolution: {integrity: sha512-a4DDyqQiMrtqutvqwji9B2/eNmRV0aLY60jU/bmyyJYM9A61FgLI1t6d/Rpri38DJkMT7OicpGvCbWRDTvec0A==}
     engines: {node: '>=14'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   depd@2.0.0:
     resolution: {integrity: sha512-g7nH6P6dyDioJogAAGprGpCtVImJhpPk/roCzdb3fIh61/s/nPsfR6onyMwkCAR/OlC3yBC0lESvUoQEAssIrw==}
@@ -3733,6 +3748,7 @@ packages:
 
   eslint-import-resolver-exports@1.0.0-beta.5:
     resolution: {integrity: sha512-o6t0w7muUpXr7MkUVzD5igQoDfAQvTmcPp8HEAJdNF8eOuAO+yn6I/TTyMxz9ecCwzX7e02vzlkHURoScUuidg==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       eslint: '*'
       eslint-plugin-import: '*'
@@ -4218,8 +4234,8 @@ packages:
   fn.name@1.1.0:
     resolution: {integrity: sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==}
 
-  follow-redirects@1.15.9:
-    resolution: {integrity: sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==}
+  follow-redirects@1.16.0:
+    resolution: {integrity: sha512-y5rN/uOsadFT/JfYwhxRS5R7Qce+g3zG97+JrtFZlC9klX/W5hD7iiLzScI4nZqUS7DNUdhPgw4xI8W2LuXlUw==}
     engines: {node: '>=4.0'}
     peerDependencies:
       debug: '*'
@@ -4251,8 +4267,8 @@ packages:
     resolution: {integrity: sha512-q5YBMeWy6E2Un0nMGWMgI65MAKtaylxfNJGJxpGh45YDciZB4epbWpaAfImil6CPAPTYB4sh0URQNDRIZG5F2w==}
     engines: {node: '>= 6'}
 
-  form-data@4.0.2:
-    resolution: {integrity: sha512-hGfm/slu0ZabnNt4oaRZ6uREyfCj6P4fT/n6A1rGV+Z0VdGXjfOhVUpkn6qVQONHGIFwmveGXyDs75+nr6FM8w==}
+  form-data@4.0.6:
+    resolution: {integrity: sha512-vKatAh4SlVfgbv+YtmhiRjhEMJsYpsG1Y2rMQtR+SVSbytsSD1YGzDIcrAJmdFec88u/+VoGmxnl+80gL1tRCQ==}
     engines: {node: '>= 6'}
 
   formdata-polyfill@4.0.10:
@@ -4429,6 +4445,7 @@ packages:
   git-raw-commits@2.0.11:
     resolution: {integrity: sha512-VnctFhw+xfj8Va1xtfEqCUD2XDrbAPSJx+hSrE5K7fGdjZruW7XV+QOrN7LF/RJyvspRiD2I0asWsxFp0ya26A==}
     engines: {node: '>=10'}
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   git-up@8.1.1:
@@ -4454,20 +4471,22 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   glob@9.3.5:
     resolution: {integrity: sha512-e1LleDykUz2Iu+MTYdkSsuWX8lvAjAcs0Xef0lNIu0S2wOAzuTxCJtcd9S3cijlwYF18EsU3rzb8jPVobxDh9Q==}
     engines: {node: '>=16 || 14 >=14.17'}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -4618,6 +4637,10 @@ packages:
 
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
+    engines: {node: '>= 0.4'}
+
+  hasown@2.0.4:
+    resolution: {integrity: sha512-T2UbfbBEF32wiepXIsMlTW9+dDYC6wMh/t/vYA4tuOMKqWz/n3vr1NFSxQiyP+zk2mXsoMA/i/7qV6LKut1t1A==}
     engines: {node: '>= 0.4'}
 
   he@1.2.0:
@@ -5924,6 +5947,7 @@ packages:
   mocha-ui-exports-auto-describe@3.0.0:
     resolution: {integrity: sha512-sS2UPuGMR/HCFUduIiUgBgRhbuy+xf88IGGMX+urMfN5hvoKQngZT+XiZQyjCRDy6RToxhbmSEeA055PnjXQ7Q==}
     engines: {node: '>=16'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   mocha@10.8.2:
     resolution: {integrity: sha512-VZlYo/WE8t1tstuRmqgeyBgCbJc/lEdopaa+axcKzTBJ+UIdlAB9XnmvTCAH4pwR4ElNInaedhEBmZD8iCSVEg==}
@@ -6188,9 +6212,9 @@ packages:
   nth-check@2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
 
-  nuxt-dev-ready@3.0.0:
-    resolution: {integrity: sha512-7F+zTD0I/a7QZPUpnFq4WWt8TbMYUYRjQTKBnFLayIYqx6a5k8w61n9aS3gafHwRGBEX00mPv7ggn0n3b004Cg==}
-    engines: {node: '>=18'}
+  nuxt-dev-ready@6.0.0:
+    resolution: {integrity: sha512-yxPli2O9SBHG7/P3GRi1Rfy0oiNYsWFiUT3UiUMXhQnp+xLK6JCEjOhXYDpgQZG2pWhMMLNO2iamx7fQHhlQ9w==}
+    engines: {node: '>=22'}
 
   nuxt@3.17.1:
     resolution: {integrity: sha512-RFUamVkXw86Kn9l3jeHLNnctsNf5Dp5pQY2bal9uZFiq1Wc9VyMdzou70DbMUjDe1yAoUbD6qz65FOEq+abesQ==}
@@ -6441,6 +6465,10 @@ packages:
     resolution: {integrity: sha512-lwx6u1CotQYPVju77R+D0vFomni/AqRfqLmqQ8hekklqZ6gAY9rONh7lBQ0uxWMkC2AuX9b2DVAl8To0NyP1JA==}
     engines: {node: '>=12'}
 
+  p-wait-for@6.0.0:
+    resolution: {integrity: sha512-2kKzMtjS8TVcpCOU/gr3vZ4K/WIyS1AsEFXFWapM/0lERCdyTbB6ZeuCIp+cL1aeLZfQoMdZFCBTHiK4I9UtOw==}
+    engines: {node: '>=20'}
+
   package-hash@4.0.0:
     resolution: {integrity: sha512-whdkPIooSu/bASggZ96BWVvZTRMOFxnyUG5PnTSGKoJE2gd5mbVNmR2Nj20QFzxYYgAXpoqC+AiXzl+UMRh7zQ==}
     engines: {node: '>=8'}
@@ -6630,6 +6658,7 @@ packages:
   playwright-local-tmp-dir@1.0.0:
     resolution: {integrity: sha512-kx+4AubMHUsqxNDUU1YhVwRdszY89SWXCBXLyGcGFlBv/SnLbRnNY9iz+IsyWLO53Z8n49Y9dTyLouagA13vWg==}
     engines: {node: '>=18'}
+    deprecated: Use Playwright per-test output dir (testInfo.outputPath('')) to generate local test data
     peerDependencies:
       '@playwright/test': ^1
 
@@ -6652,10 +6681,6 @@ packages:
   pngjs@6.0.0:
     resolution: {integrity: sha512-TRzzuFRRmEoSW/p1KVAmiOgPco2Irlah+bGFCeNfJXxxYGwSw7YwAOAcd7X28K/m5bjBWKsC29KyoMfHbypayg==}
     engines: {node: '>=12.13.0'}
-
-  port-ready@0.1.0:
-    resolution: {integrity: sha512-6IJ0anhRxATv5dZ5PJgYOwDbl3Jeu2GqnB/gLngC16Mur/4/ELdkIrg3D5RNS9bfek+r10rs3206+Jgv65Z+bw==}
-    engines: {node: '>=6'}
 
   posix-character-classes@0.1.1:
     resolution: {integrity: sha512-xTgYBc3fuo7Yt7JbiuFxSYGToMoz8fLoE6TC9Wx1P/u+LfeThMOAqmuyECnlBaaJb+u1m9hHiXUEtwW4OzfUJg==}
@@ -6911,8 +6936,9 @@ packages:
   protocols@2.0.2:
     resolution: {integrity: sha512-hHVTzba3wboROl0/aWRRG9dMytgH6ow//STBZh43l/wQgmMhYhOFi0EHWAPtoCz9IAUymsyP0TSBHkhgMEGNnQ==}
 
-  proxy-from-env@1.1.0:
-    resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
+  proxy-from-env@2.1.0:
+    resolution: {integrity: sha512-cJ+oHTW1VAEa8cJslgmUZrc+sjRKgAKl3Zyse6+PV38hZe/V6Z14TbCuXcan9F9ghlz4QrFr2c92TNF82UkYHA==}
+    engines: {node: '>=10'}
 
   psl@1.15.0:
     resolution: {integrity: sha512-JZd3gMVBAVQkSs6HdNZo9Sdo0LNcQeMNP3CozBJb3JYC/QUYZTnKxP+f8oWRX4rHP5EurWxqAHTSwUCjlNKa1w==}
@@ -7683,6 +7709,9 @@ packages:
   suppress-experimental-warnings@2.0.0:
     resolution: {integrity: sha512-qhKWoR1nw9MwQDjzPiBMus44Wj1+AD7EIa7caPcYXMASyB6NppO7k1a+xRjyDBpPS4ZufauFLyqaXEPnKXHY1Q==}
     engines: {node: '>=18'}
+    deprecated: |-
+      Use Node.js
+       --no-warnings=ExperimentalWarning flag
 
   svg-element-attributes@1.3.1:
     resolution: {integrity: sha512-Bh05dSOnJBf3miNMqpsormfNtfidA/GxQVakhtn0T4DECWKeXQRQUceYjJ+OxYiiLdGe4Jo9iFV8wICFapFeIA==}
@@ -7721,10 +7750,12 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   tar@7.4.3:
     resolution: {integrity: sha512-5S7Va8hKfV7W5U6g3aYxXmlPoZVAwUMy9AOKyF2fVuZa2UD3qZjg578OrLRt8PcNN1PleVaL/5/yYATNL0ICUw==}
     engines: {node: '>=18'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   temp-dir@3.0.0:
     resolution: {integrity: sha512-nHc6S/bwIilKHNRgK/3jlhDoIHcp45YgyiwcAk46Tr0LfEqGBVpmiAyuiuxeVE44m3mXnEeVhaipLOEWmH+Njw==}
@@ -8047,6 +8078,7 @@ packages:
 
   unplugin-vue-router@0.12.0:
     resolution: {integrity: sha512-xjgheKU0MegvXQcy62GVea0LjyOdMxN0/QH+ijN29W62ZlMhG7o7K+0AYqfpprvPwpWtuRjiyC5jnV2SxWye2w==}
+    deprecated: 'Merged into vuejs/router. Migrate: https://router.vuejs.org/guide/migration/v4-to-v5.html'
     peerDependencies:
       vue-router: ^4.4.0
     peerDependenciesMeta:
@@ -8177,6 +8209,7 @@ packages:
 
   uuid@8.3.2:
     resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
     hasBin: true
 
   v8-to-istanbul@8.1.1:
@@ -8361,6 +8394,7 @@ packages:
 
   whatwg-encoding@1.0.5:
     resolution: {integrity: sha512-b5lim54JOPN9HtzvK9HFXvBma/rnfFeqsic0hSpjtDbVxR3dJKLc+KB4V6GgiGOvl7CY/KNh8rxSo9DKQrnUEw==}
+    deprecated: Use @exodus/bytes instead for a more spec-conformant and faster implementation
 
   whatwg-mimetype@2.3.0:
     resolution: {integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==}
@@ -9834,6 +9868,12 @@ snapshots:
   '@dword-design/plugin-name-to-package-name@0.1.2':
     dependencies:
       is-absolute: 1.0.0
+
+  '@dword-design/port-ready-fork@0.0.3':
+    dependencies:
+      connect-port: 0.0.1
+      p-timeout: 2.0.1
+      p-wait-for: 1.0.0
 
   '@dword-design/pretest@1.0.15(jest@27.5.1)':
     dependencies:
@@ -11809,13 +11849,15 @@ snapshots:
 
   axe-core@4.10.3: {}
 
-  axios@1.9.0:
+  axios@1.20.0:
     dependencies:
-      follow-redirects: 1.15.9
-      form-data: 4.0.2
-      proxy-from-env: 1.1.0
+      follow-redirects: 1.16.0
+      form-data: 4.0.6
+      https-proxy-agent: 5.0.1
+      proxy-from-env: 2.1.0
     transitivePeerDependencies:
       - debug
+      - supports-color
 
   axobject-query@4.1.0: {}
 
@@ -13028,7 +13070,7 @@ snapshots:
       es-errors: 1.3.0
       get-intrinsic: 1.3.0
       has-tostringtag: 1.0.2
-      hasown: 2.0.2
+      hasown: 2.0.4
 
   es-shim-unscopables@1.1.0:
     dependencies:
@@ -13815,7 +13857,7 @@ snapshots:
 
   fn.name@1.1.0: {}
 
-  follow-redirects@1.15.9: {}
+  follow-redirects@1.16.0: {}
 
   for-each@0.3.5:
     dependencies:
@@ -13844,11 +13886,12 @@ snapshots:
       es-set-tostringtag: 2.1.0
       mime-types: 2.1.35
 
-  form-data@4.0.2:
+  form-data@4.0.6:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       es-set-tostringtag: 2.1.0
+      hasown: 2.0.4
       mime-types: 2.1.35
 
   formdata-polyfill@4.0.10:
@@ -14263,6 +14306,10 @@ snapshots:
       type-fest: 0.8.1
 
   hasown@2.0.2:
+    dependencies:
+      function-bind: 1.1.2
+
+  hasown@2.0.4:
     dependencies:
       function-bind: 1.1.2
 
@@ -16157,13 +16204,14 @@ snapshots:
     dependencies:
       boolbase: 1.0.0
 
-  nuxt-dev-ready@3.0.0:
+  nuxt-dev-ready@6.0.0:
     dependencies:
-      axios: 1.9.0
-      p-wait-for: 5.0.2
-      port-ready: 0.1.0
+      axios: 1.20.0
+      p-wait-for: 6.0.0
+      port-ready: '@dword-design/port-ready-fork@0.0.3'
     transitivePeerDependencies:
       - debug
+      - supports-color
 
   nuxt@3.17.1(@parcel/watcher@2.5.1)(@types/node@22.15.3)(db0@0.3.2)(eslint@8.57.1)(ioredis@5.6.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.40.1)(sass@1.62.1)(terser@5.39.0)(typescript@5.8.3)(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(sass@1.62.1)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
     dependencies:
@@ -16570,6 +16618,8 @@ snapshots:
     dependencies:
       p-timeout: 6.1.4
 
+  p-wait-for@6.0.0: {}
+
   package-hash@4.0.0:
     dependencies:
       graceful-fs: 4.2.11
@@ -16742,12 +16792,6 @@ snapshots:
   pngjs@3.4.0: {}
 
   pngjs@6.0.0: {}
-
-  port-ready@0.1.0:
-    dependencies:
-      connect-port: 0.0.1
-      p-timeout: 2.0.1
-      p-wait-for: 1.0.0
 
   posix-character-classes@0.1.1: {}
 
@@ -16996,7 +17040,7 @@ snapshots:
 
   protocols@2.0.2: {}
 
-  proxy-from-env@1.1.0: {}
+  proxy-from-env@2.1.0: {}
 
   psl@1.15.0:
     dependencies:
